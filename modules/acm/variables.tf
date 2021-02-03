@@ -81,7 +81,7 @@ variable "enable_policy_controller" {
   default     = true
 }
 
-variable "referentials_rules"
+variable "referential_rules"
    description = "Whether to enable the Policy Controller Referential Rules on the cluster"
    type        = bool
    default     = false
