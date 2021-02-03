@@ -20,7 +20,6 @@ module "acm" {
   cluster_name     = "my-cluster-name"
   location         = module.gke.location
   cluster_endpoint = module.gke.endpoint
-
   sync_repo        = "git@github.com:GoogleCloudPlatform/csp-config-management.git"
   sync_branch      = "1.0.0"
   policy_dir       = "foo-corp"
@@ -52,6 +51,7 @@ By default, this module will attempt to download the ACM operator from Google di
 | enable\_policy\_controller | Whether to enable the ACM Policy Controller on the cluster | `bool` | `true` | no |
 | hierarchy\_controller | Configurations for Hierarchy Controller. See [Hierarchy Controller docs](https://cloud.google.com/anthos-config-management/docs/how-to/installing-hierarchy-controller) for more details | `map` | `null` | no |
 | install\_template\_library | Whether to install the default Policy Controller template library | `bool` | `true` | no |
+| referentials\_rules | Whether to install the Policy Controller Referentials constraints | `bool` | `false` | no |
 | location | GCP location used to reach cluster. | `string` | n/a | yes |
 | operator\_path | Path to the operator yaml config. If unset, will download from GCS releases. | `string` | `null` | no |
 | policy\_dir | Subfolder containing configs in ACM Git repo. If un-set, uses Config Management default. | `string` | `""` | no |

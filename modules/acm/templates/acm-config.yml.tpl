@@ -8,6 +8,7 @@ spec:
   policyController:
     enabled: ${enable_policy_controller}
     templateLibraryInstalled: ${install_template_library}
+    referentialRulesEnabled: ${referential_rules}
     logDeniesEnabled: ${enable_log_denies}
   git:
     syncRepo: ${sync_repo}

@@ -81,6 +81,12 @@ variable "enable_policy_controller" {
   default     = true
 }
 
+variable "referentials_rules"
+   description = "Whether to enable the Policy Controller Referential Rules on the cluster"
+   type        = bool
+   default     = false
+}
+
 variable "install_template_library" {
   description = "Whether to install the default Policy Controller template library"
   type        = bool
